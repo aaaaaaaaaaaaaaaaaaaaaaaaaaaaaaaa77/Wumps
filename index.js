@@ -65,6 +65,7 @@ client.on('message', async message => {
 	}
 });
 
-
+global.devs = ["503934026189635594", "640224786366201856"];
+//someone add all our userids here, already added me and exists -yeeted
 
 client.login(process.env.TOKEN).catch(err => console.log(`Invalid Token Provided!`));
