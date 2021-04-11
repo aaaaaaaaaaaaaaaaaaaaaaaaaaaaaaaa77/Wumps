@@ -6,7 +6,7 @@ module.exports = {
     aliases: ['suggest','suggestions'],
     guildOnly: true,
     execute(message, args, cmd, client, Discord) {
-       
+       message.delete({timeout: 4000})
         const content = args.splice(0).join(" ");
         const channel = message.guild.channels.cache.find(channel => channel.name === "suggestions");
         const icon = message.guild.iconURL({format: "png", size: 1024, dynamic: true})
