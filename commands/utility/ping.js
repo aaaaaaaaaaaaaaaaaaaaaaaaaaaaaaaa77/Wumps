@@ -1,27 +1,26 @@
-const { MessageEmbed } = require("discord.js");
+const {MessageEmbed} = require('discord.js');
+
 module.exports = {
-  name: "ping",
-  category: "info",
-  description: "Returns latency and API ping",
+	name: 'ping',
+	aliases: ["ms", "latency"],
+	description: 'Ping!',
+	execute(message, args, cmd, client, Discord) {
+		const firstEmbed = new MessageEmbed()
+        .setDescription('🏓Pinging.........')
+        .setColor('36393F')
 
-  /**
-   * @param {Client} client
-   * @param {Message} message
-   * @param {String[]} args
-   */
+		const pingEmbed = new MessageEmbed()
+		.setAuthor(`${message.author.username}`, message.author.displayAvatarURL({format:"png", dynamic:true}))
+		.setThumbnail('https://cdn.discordapp.com/attachments/829429799549403136/829652374544056360/thing.png')
+		.addFields(
+			{ name: 'API', value: `${message.client.ws.ping}`},
+			{ name: 'Bot Latency', value: `${Date.now() - message.createdTimestamp}`}
+		)
+		.setColor('36393F')
 
-  run: async (client, message, args) => {
-    const msg = await message.channel.send(`🏓 Pinging...`);
-    const embed = new MessageEmbed()
-      .setTitle("Pong!")
-      .setDescription(
-        `WebSocket ping is ${
-          client.ws.ping
-        }MS\nMessage edit ping is ${Math.floor(
-          msg.createdAt - message.createdAt
-        )}MS!`
-      );
-    await message.channel.send(embed);
-    msg.delete();
-  },
-};
+		message.channel.send(firstEmbed)
+		.then(msg => {
+            setTimeout(function() {
+                msg.edit(pingEmbed)
+            }, 3000);
+		})}}
