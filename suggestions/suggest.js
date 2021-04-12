@@ -9,7 +9,7 @@ module.exports = {
   run: async (client, message, args) => {
    
   let channel = await db.fetch(`suggestion_${message.guild.id}`);
-    if (channel === null) return message.channel.send(`**No suggestion channels as been set!\n\\`c!setsuggest [channel]\` To Enable a suggestion channel**`);
+    if (channel === null) return message.channel.send(`**No suggestion channel set. Use \n\\`w!setsuggest [channel]\` to set a suggestion channel**`);
   
   const suggestionQuery = args.join(" ");
   if(!suggestionQuery) return message.reply(" Please Suggest Something.");
