@@ -10,7 +10,7 @@ module.exports = {
 
     category: "fun",
 
-    usage: "ascii <text>",
+    usage: "w!ascii <text>",
 
     description: "Returns provided  in ascii format.",
 
