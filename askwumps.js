@@ -1,8 +1,8 @@
 const Discord = module.require("discord.js");
 
 module.exports = {
-  name: "8ball",
-  description: "for your 8ball needs",
+  name: "askwumps",
+  description: "8ball",
   args:["[Question]"],
   run(client, message, args) {
     if (!args[0]) {
@@ -30,7 +30,6 @@ module.exports = {
       "Yes.",
       "Yes – definitely.",
       "You may rely on it.",
-      "I have your IP Address."
     ];
     let answer = answers[Math.floor(Math.random() * answers.length)];
     let msg = new Discord.MessageEmbed()
