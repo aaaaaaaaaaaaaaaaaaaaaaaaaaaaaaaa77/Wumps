@@ -9,7 +9,7 @@ module.exports = {
     authorPermission: ["MANAGE_GUILD"],
     run: async (client, message, args) => {
       if (!message.member.hasPermission("MANAGE_ROLES")) {
-      return message.channel.send(" ***sorry you need permission ``MANAGE_GUILD`` to do that***");
+      return message.channel.send(" ***You need ``MANAGE_GUILD``permission to set a suggestion channel.**");
     }
 
         let Channel = message.mentions.channels.first() || message.guild.channels.cache.get(args[0]);
@@ -22,7 +22,8 @@ module.exports = {
 
         let Embed = new MessageEmbed()
         .setColor("00FFFF")
-        .setDescription(` Suggestion Channel is setted as <#${Channel.id}>`)
+        .setDescription(`Successfully set the suggestions channel to <#${Channel.id}>.')
+    
 
         return message.channel.send(Embed);
 
