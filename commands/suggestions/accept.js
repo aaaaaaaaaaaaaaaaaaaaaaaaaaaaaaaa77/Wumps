@@ -14,7 +14,7 @@ module.exports = {
 
 let channel = await db.fetch(`suggestion_${message.guild.id}`);
 
-    if (channel === null) return message.channel.send(`<a:Missing_perms:826125661264543835>**No suggestion channels as been set!\n\<a:right:821692521653469194>\`c!setsuggest [channel]\` To Enable a suggestion channel**`);
+    if (channel === null) return message.channel.send(`No suggestion channels has been set. Use `w!setsuggest [channel]\` to set a suggestion channel`);
 
 if (channel === null) return;
 
@@ -34,7 +34,7 @@ if (channel === null) return;
 
     const number = new MessageEmbed()
 
-      .setDescription(`<a:Never:792521914920337469> | I don't think that was a Message ID!`)
+      .setDescription(`Please use a valid message ID.`)
 
       .setColor("FF2052")
 
@@ -42,7 +42,7 @@ if (channel === null) return;
 
     const id = new MessageEmbed()
 
-      .setDescription(`<a:Never:792521914920337469> |You forgot to specify Message ID!`)
+      .setDescription('You forgot to specify a message ID.`)
 
       .setColor("FF2052")
 
@@ -50,7 +50,7 @@ if (channel === null) return;
 
     const query = new MessageEmbed()
 
-      .setDescription(`<a:Never:792521914920337469> | You forgot to specify the reason!`)
+      .setDescription(`You forgot to specify the reason.`)
 
       .setColor("FF2052")
 
@@ -58,7 +58,7 @@ if (channel === null) return;
 
     const reply = new MessageEmbed()
 
-      .setDescription(`<a:Kk:792521917507829760> | Successfully accepted the Suggestion.`)
+      .setDescription(`Successfully accepted the suggestion.`)
 
       .setColor("00FFFF")
 
@@ -66,7 +66,7 @@ if (channel === null) return;
 
     const noChannel = new MessageEmbed()
 
-      .setDescription(`<a:Never:792521914920337469> | No Suggestion Channel found!`)
+      .setDescription(`No suggestion channel found.`)
 
       .setColor("FF2052")
 
@@ -74,7 +74,7 @@ if (channel === null) return;
 
     const noMessage = new MessageEmbed()
 
-      .setDescription(`<a:Never:792521914920337469> | Didn't find any Message with that ID!`)
+      .setDescription(`I cannot find any message with that ID, please use a valid message ID.`)
 
       .setColor("FF2052")
 
@@ -106,7 +106,7 @@ if (channel === null) return;
 
     const noMessage = new MessageEmbed()
 
-      .setDescription(`<a:Never:792521914920337469> | Didn't find any Message with that ID!`)
+      .setDescription(`I cannot find any message with that ID, please use a valid message ID.`)
 
       .setColor("FF2052")
 
@@ -150,9 +150,9 @@ if (channel === null) return;
 
     const embed = new MessageEmbed()
 
-      .setDescription(`<a:annonce:820270431083954206> | Your Suggestion as been accepted. **[Message Link](https://discord.com/channels/${message.guild.id}/${channel}/${messageID})**`)
+      .setDescription(`Your [suggestion](https://discord.com/channels/${message.guild.id}/${channel}/${messageID}) has been accepted.`)
 
-      .setColor("BLUE")
+      .setColor("GREEN")
 
       user.send(embed)
 
