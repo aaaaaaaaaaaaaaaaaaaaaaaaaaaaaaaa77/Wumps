@@ -23,7 +23,7 @@ module.exports = {
        .setTimestamp();
        
     const done = new MessageEmbed()
-       .setDescription(` Your suggestion is Submitted here, <#${channel}>\n\nNote: You agreed to get a DM on a reply over your Suggestion!`)
+       .setDescription(` Your suggestion was successfully sent to <#${channel}>!`)
        .setColor("BLUE")
        
     message.channel.send(done)
