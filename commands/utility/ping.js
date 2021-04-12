@@ -6,7 +6,7 @@ module.exports = {
 	description: 'Ping!',
 	execute(message, args, cmd, client, Discord) {
 		const firstEmbed = new MessageEmbed()
-        .setDescription('🏓Pong!')
+        .setDescription('🏓Pinging.....!')
         .setColor('36393F')
 
 		const pingEmbed = new MessageEmbed()
