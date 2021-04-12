@@ -7,7 +7,7 @@ const path = require("path");
 module.exports = {
 
     name: path.parse(__filename).name,
-    category: "👻 Fun Commands",
+    category: "Fun Commands",
     useage: `${path.parse(__filename).name} [@User]`,
   description: "*Image cmd in the style:* " + path.parse(__filename).name ,
     run: async (client, message, args) => {
@@ -21,6 +21,6 @@ module.exports = {
         .setImage("attachment://invert.png")
         .attachFiles(attachment)
         await message.channel.send(fastembed2);
-        await tempmsg.delete();//hitler
+        await tempmsg.delete():
     }
 }
