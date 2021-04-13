@@ -1,4 +1,4 @@
-const ownerid = ["733996780823248956"]; ///google
+const ownerid = ["705800869962055741"]; ///google
 const ownerid2 = ["ANOTHER DEV1"];
 
 module.exports = {
