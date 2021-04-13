@@ -20,7 +20,7 @@ client.on('ready', async () => {
 
 });
 
-const Categories = ['fun', 'owner','utility']
+const Categories = ['fun', 'utility']
 
 Categories.forEach(async function(Category) {
 
@@ -118,6 +118,8 @@ client.on('message', async message => {
 
 		client.commands.get(cmd) || client.commands.get(client.aliases.get(cmd));
 
+  console.log(command);
+
 	if (!command) return console.log(`No Command Found!`);
 
 	const Allowed = await db.fetch(
@@ -130,7 +132,9 @@ client.on('message', async message => {
 
 	if (command) {
 
-		command.run(client, message, args);
+    
+
+		command.run(client, message, args, {Cat: Categories });
 
 	}
 
