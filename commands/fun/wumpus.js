@@ -2,19 +2,17 @@ const Discord = require("discord.js");
 const { MessageEmbed } = require('discord.js');
 
 module.exports = {
-  name: "wumps",
+  name: "wumpus",
   category: "fun",
-  description: "Return a message from wumpus",
+  description: "Return A message from wumpus!",
   usage: "wumpus  | <Text>",
   run: async (bot, message, args) => {
     let text = args.join(" ");
 
         if (!text) {
-            return message.channel.send("Enter text that you want Wumpus to say.**");
+            return message.channel.send("**Enter some Text**");
         }
-  
-       const imageembed = new Discord.MessageEmbed()
-      .setTitle(wumps.png)
+  const embed = new MessageEmbed()
       .setColor(`#1ABC9C`)
       .setImage(`https://wumps-api.blissysgfx.repl.co/wumpus?text=${text}`)      
       await message.channel.send(embed)
