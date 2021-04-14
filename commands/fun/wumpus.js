@@ -12,7 +12,9 @@ module.exports = {
         if (!text) {
             return message.channel.send("Enter text that you want Wumpus to say.**");
         }
-  const embed = new MessageEmbed()
+  
+       const imageembed = new Discord.MessageEmbed()
+      .setTitle(wumps.png)
       .setColor(`#1ABC9C`)
       .setImage(`https://wumps-api.blissysgfx.repl.co/wumpus?text=${text}`)      
       await message.channel.send(embed)
