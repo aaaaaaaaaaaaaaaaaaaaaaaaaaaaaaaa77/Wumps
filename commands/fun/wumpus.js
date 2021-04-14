@@ -4,13 +4,13 @@ const { MessageEmbed } = require('discord.js');
 module.exports = {
   name: "wumpus",
   category: "fun",
-  description: "Return A message from wumpus!",
-  usage: "wumpus  | <Text>",
+  description: "Return a message from wumpus",
+  usage: "w!wmpus <text>",
   run: async (bot, message, args) => {
     let text = args.join(" ");
 
         if (!text) {
-            return message.channel.send("**Enter some Text**");
+            return message.channel.send("Enter some text for wumpus to say.");
         }
   const embed = new MessageEmbed()
       .setColor(`#1ABC9C`)
