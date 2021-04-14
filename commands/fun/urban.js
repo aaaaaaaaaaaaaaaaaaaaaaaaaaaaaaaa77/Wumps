@@ -4,7 +4,7 @@ const config = require("../../config.json")
 module.exports = {
     name: "urban",
     category: "⚙️ Utility Commands",
-  description: "Shows you a deffinition from urban dictionary",
+  description: "Shows you a definition from the urban dictionary",
   usage: "urban <your word>",
   run: async (client, message, args) => {
 
